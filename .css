@@ -1,0 +1,27 @@
+body {
+    background: #000;
+}
+.square {
+    display:table-cell;
+    vertical-align:middle;
+    text-align: center;
+    border:1px solid black;
+    height: 40px;
+    width: 960px;
+    background-color:white;
+}
+#container {
+    margin: auto;
+    width: 960px;
+    text-align:center;
+}
+#clear {
+    background-color: #c0c0c0;
+    width: 150px;
+    height: 30px;
+}
+#pixelgrid {
+    margin:auto;
+    width:960px;
+    overflow: center;
+}
