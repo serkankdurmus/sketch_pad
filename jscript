@@ -1,0 +1,62 @@
+var $grid = $("#pixelgrid");
+
+for (i = 0; i < 16; i++) {
+    var row = "<div>";
+
+    for (j = 0; j < 16; j++){
+        row += '<div class="square">' + " " + "</div>";
+    }
+        row += "</div>";
+
+    $grid.append(row);
+    
+}
+
+$(function(){
+$(".square").hover(
+    function () {
+    $(this).css(
+        "background-color", "green")},
+
+    function () {
+        $(this).css(
+            "background-color", "white");
+    });
+});
+$("#clear").click(function(){
+    $(".square").remove();
+    
+    var num = prompt("Type an integer between 1 and 64");
+    
+    if(num >= 1 && num <= 64){         // for working with reasonable numbers
+       var square_size = $("grid").width()/num -2 ;     // -2 for border size
+        
+    for (i = 0; i < num; i++) {
+    var row = "<div>";
+
+    for (j = 0; j < num; j++){
+        row += '<div class="square">' + " " + "</div>";
+    }
+        row += "</div>";
+
+    $grid.append(row);
+}
+        
+  
+$(function(){
+$(".square").hover(
+    function () {
+    $(this).css(
+        "background-color", "green")},
+
+    function () {
+        $(this).css(
+            "background-color", "white");
+    });
+});
+    
+}
+    else {
+        alert("Choose a number between 1 and 64");
+    }
+});
